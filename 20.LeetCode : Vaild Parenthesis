@@ -1,0 +1,26 @@
+class Solution:
+    def isValid(self, s: str) -> bool:
+        stack =[]
+        for Bracket in s:
+            if Bracket =="(" or Bracket =="{" or Bracket == "[":
+                stack.append(Bracket)
+            else:
+                if len(stack)==0:
+                    return False  
+                ch = stack.pop()
+                if(
+                    (Bracket ==")"and ch == "(")
+                    or(Bracket =="}"and ch == "{")
+                    or(Bracket =="]"and ch == "[")
+                   
+                ):
+                    continue
+                else:
+                    return False
+        return len(stack)==0            
+
+
+                
+                
+
+        
