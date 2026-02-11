@@ -1,0 +1,15 @@
+def find(arr):
+    maxx,minn = arr[0],arr[0]
+    for num in arr[1:]:
+        if num < minn:
+            minn = num
+        elif num > maxx:
+            maxx = num
+    return minn,maxx
+arr = [4,10,40,1,5,9,2,6,3,5]
+minn,maxx=find(arr)     
+print(maxx,minn)     # tc = o(n)
+
+#super shortcut using inbulit function 
+arr = [4,10,40,1,5,9,2,6,3,5]
+print(max(arr),min(arr))
