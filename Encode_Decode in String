@@ -1,0 +1,16 @@
+# point of view Receiver
+
+alphabets = "abcdefghijklmnopqrstuvwxyz" #26
+encode="defg" 
+decode=""
+for i in range(len(encode)):
+    decode += alphabets[(alphabets.index(encode[i])-3)%26] #Decrement
+print(decode) 
+
+# point of view Sender
+alphabets = "abcdefghijklmnopqrstuvwxyz" #26
+encode="" 
+decode="abcd"
+for i in range(len(decode)):
+    encode += alphabets[(alphabets.index(decode[i])+3)%26] #Increment
+print(encode)    
